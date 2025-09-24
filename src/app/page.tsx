@@ -1,8 +1,17 @@
-import Navbar from "@/components/header/header";
-import DexPathSection from "@/components/home/hero";
-import ProductShowcase from "@/components/home/hero";
-import Image from "next/image";
+import AboutUs from "@/components/home/aboutus";
+import FAQ from "@/components/home/faq";
+import ProductFeatures from "@/components/home/features";
+import Hero from "@/components/home/hero";
+import SustainabilityPolicy from "@/components/home/sustainabilityPolicy";
 
 export default function Home() {
-  return <DexPathSection />;
+  return (
+    <main>
+      <Hero />
+      <AboutUs />
+      <ProductFeatures />
+      <SustainabilityPolicy />
+      <FAQ />
+    </main>
+  );
 }

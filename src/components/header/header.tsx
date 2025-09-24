@@ -1,48 +1,47 @@
+// src/components/Header.tsx
+
 import Link from "next/link";
 import Image from "next/image";
 
-const Navbar = () => {
+const Header = () => {
   return (
-    <nav className="bg-[#0F0F10] text-white px-[7.5rem] py-4 flex items-center justify-between">
-      {/* Logo */}
-      <div className="flex items-center">
-        <Image
-          src="/logo.png" // replace with your logo path
-          alt="DexPath Logo"
-          width={120}
-          height={40}
-          className="object-contain"
-        />
-      </div>
+    <header className="w-full bg-black text-white">
+      <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+        {/* Logo Section */}
+        <div className="flex items-center space-x-2">
+          {/* Replace with your actual logo image if needed */}
+          <Image
+            src="/logo.png" // replace with your logo in /public
+            alt="Dexpath Logo"
+            width={200}
+            height={120}
+          />
+        </div>
 
-      {/* Menu Items */}
-      <ul className="flex space-x-8">
-        <li>
+        {/* Navigation */}
+        <nav className="flex items-center space-x-8">
           <Link
-            href="#"
-            className="font-semibold text-white hover:text-gray-400"
+            href="/"
+            className="px-4 py-2 rounded-full bg-neutral-800 text-white"
           >
             Home
           </Link>
-        </li>
-        <li>
-          <Link href="/specs" className="text-gray-500 hover:text-gray-400">
-            Specs
+          <Link href="/projects" className="hover:text-gray-300">
+            Projects
           </Link>
-        </li>
-        <li>
-          <Link href="/case" className="text-gray-500 hover:text-gray-400">
-            Case
+          <Link href="/careers" className="hover:text-gray-300">
+            Careers
           </Link>
-        </li>
-        <li>
-          <Link href="/styles" className="text-gray-500 hover:text-gray-400">
-            Styles
+          <Link href="/sustainability" className="hover:text-gray-300">
+            Sustainability
           </Link>
-        </li>
-      </ul>
-    </nav>
+          <Link href="/contact" className="hover:text-gray-300">
+            Contact
+          </Link>
+        </nav>
+      </div>
+    </header>
   );
 };
 
-export default Navbar;
+export default Header;
